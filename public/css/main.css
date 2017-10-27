@@ -1,0 +1,146 @@
+body {
+  padding-top: 2px;
+}
+
+.align {
+	padding-left:0px !important;
+	padding-right:0px !important;
+}
+
+.sideBorder {
+    border-right-style: solid;
+    border-right-width: 1px;
+	border-left-style: solid;
+    border-left-width: 1px;
+}
+
+.text {
+	color: black; 
+}
+
+.boxLink:hover {
+	background-color: orange;
+}
+
+.boxLinkImage {
+	opacity: 0.7;
+	background-color: #ff9931;
+}
+
+.headerLink {
+	text-align: center;
+}
+
+.verticalLine {
+  border-left: thick solid #ff0000;
+}
+
+.borderRight {
+	border-right-style:solid;
+	border-right-width: 2px;
+}
+
+.header {
+	margin-top:2px;
+	margin-bottom:5px;
+}
+
+.selectedMenu{
+    pointer-events: none;
+    cursor: default;
+	font-weight:bold;
+}
+
+.logo {
+	font-family: 'Pacifico', sans-serif;
+	font-size:20px;
+}
+
+.menu{
+	font-family: 'Raleway', sans-serif;
+	font-size:15px;
+	padding-top:5px;
+}
+
+.raleway{
+	font-family: 'Raleway', sans-serif;
+}
+
+.btn{
+	background-color:#d8d8d8; 
+	border-radius:0 !important;
+}
+
+.input {
+	background-color:#ededed !important; 
+}
+
+.signUpInput {
+	border:none !important;
+	border-bottom-style:solid !important;
+	border-bottom-color:#d8d8d8 !important;
+	border-bottom-width:2px !important;
+	box-shadow:unset !important;
+	border-radius:0 !important;
+	text-align:center !important;
+	width:20% !important;
+	display:inline !important;
+	padding-top:15px;
+}
+
+.signUpInputAdditional{
+	border-left-style:solid !important;
+	border-left-color:#d8d8d8 !important;
+	border-left-width:2px !important;
+	width:50% !important;
+	height:250px !important
+}
+
+.textSignUp{
+	padding-top:25px;
+
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #9b9b9b !important; ;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #9b9b9b !important; ;
+   opacity:  1 !important; ;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #9b9b9b !important; ;
+   opacity:  1 !important; ;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #9b9b9b !important; ;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #9b9b9b !important; ;
+}
+
+.button {
+	width:100% !important; 
+	border-radius:0 !important; 
+	background-color:#ededed !important;
+	border-style:solid !important;
+	border-width:3px !important;
+	font-weight:bold !important;
+}
+
+.btnClickable {
+	border-color:#ff9931 !important;
+	color:#ff9931 !important;
+	background-color: #FFF3E0 !important;
+}
+
+
+.btnUnclickable {
+	border-color:#c16203 !important;
+	color:#c16203 !important;
+	pointer-events: none;
+    cursor: default;
+}
+
+.orangeText {
+	color:#ff9931;
+}
