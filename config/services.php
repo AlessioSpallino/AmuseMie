@@ -41,4 +41,5 @@ return [
                 'redirect' => env ( 'G+_REDIRECT' ) 
         ],
 
+        
 ];

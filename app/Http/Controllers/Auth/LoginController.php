@@ -5,35 +5,63 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
+use Laravel\Socialite\Facades\Socialite as Socialite;
+
+use App\User;
+
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
+    public function socialLogin($social)
+ 
+   {
+ 
+       return Socialite::driver($social)->redirect();
+ 
+   }
+ 
+   /**
+ 
+    * Obtain the user information from Social Logged in.
+ 
+    * @param $social
+ 
+    * @return Response
+ 
     */
+ 
+   public function handleProviderCallback($social)
+ 
+   {
+ 
+       $userSocial = Socialite::driver($social)->user();
+ 
+       $user = User::where(['email' => $userSocial->getEmail()])->first();
+ 
+       if($user){
+ 
+           \Auth::login($user);
+ 
+           return redirect()->action('EventsController@index');
+ 
+       }else{
+ 
+        // insert data to the database creating a new user
+        $newuser = new User;
 
-    use AuthenticatesUsers;
+        $newuser->name = $userSocial->getName();
+        $newuser->email = $userSocial->getEmail();
+        $newuser->profile_pic = $userSocial->getAvatar();
+        $newuser->google_id = $userSocial->getId();
+        $newuser->admin = false;
+        
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/home';
+        $newuser->save();
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('guest')->except('logout');
-    }
+        \Auth::login($user);
+ 
+        return redirect()->action('EventsController@index');
+
+       }
+ 
+   }
 }
