@@ -3,6 +3,7 @@
 @include('layout.head');
 <body>
 <div class="container raleway" style="text-align:center">
+<form action="XXX.php">
     <h1 style="padding-bottom:20px"> UPDATE ASSOCIATION</h1>
 
     <div class="textSignUp">Association name:</div>
@@ -39,11 +40,12 @@
         <input class="form-control mr-sm-2 signUpInput signUpInputAdditional" type="text" placeholder="Describe your association here" aria-label="Describe your association here">
     </div>
     <div>
-        <input class="mr-sm-2 signUpInput" style="height:180px" type="image" src="Picture/camara.png">
+        <input class="mr-sm-2 signUpInput" style="height:180px" type="image" src="Picture/camara.png" style="height:100%">
     </div>
     <div class="col-md-offset-5 col-md-2">
-        <button class="btn btn-outline-success raleway button btnClickable" style="margin-top:20px;margin-bottom: 20px" type="submit">UPDATE</button>
+        <input class="btn btn-outline-success raleway button btnClickable" style="margin-top:20px;margin-bottom: 20px" type="submit" value="UPDATE">
     </div>
+</form>
 </div>
 
 </body>
