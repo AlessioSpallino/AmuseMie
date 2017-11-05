@@ -19,3 +19,6 @@ Route::get('/tasks/{task}', 'TasksController@show');
 Route::get('/', 'EventsController@index');
 
 Route::get('/eventpage/{id}', 'EventsController@eventdetails');
+
+//Route for the Google login
+Route::get ( '/redirect/{service}', 'SocialAuthController@redirect' );

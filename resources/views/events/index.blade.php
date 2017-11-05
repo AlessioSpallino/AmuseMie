@@ -18,9 +18,9 @@
 				<div class="col-md-3 align boxLink">
 					<img class="col-md-12"  style="padding:0px" src="{{ asset('img/EventDefault.png') }}">
 					<div style="padding-left:6%;">
-						<p class="text raleway"> time </p>
-						<p class="text raleway"> <b> {{ $event->body }} </b></p>
-						<p class="text raleway"> Location </p>
+						<h4 class="text raleway"> {{ $event->title }} </h4>
+						<p class="text raleway"> <b> {{ $event->time }} </b></p>
+						<p class="text raleway"> {{ $event->address }} </p>
 					</div>
 				</div>
 			</a>
