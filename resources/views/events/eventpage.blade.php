@@ -9,10 +9,12 @@
 		@include('layout.searchbar');
 		
 		<div class="container col-md-8 raleway">
-			<h1>Event title </h1> <br>
+			<h1> 
+				{{$event->title}}
+			</h1> <br>
 			<div style="text-align: justify;">
 				<p>
-					{{$event->body}}
+					{{$event->description}}
 				</p>
 				
 			</div>
@@ -36,11 +38,12 @@
 	
 			<div class="row col-md-offset-3 col-md-8" style="margin-top:30px">
 					<img src="{{ asset('img/locationIcon.png') }}" style="width:10%">
-					<span class="orangeText raleway" style="padding-left:15px"> ADDRESS </span>
+					<span class="orangeText raleway" style="padding-left:15px"> {{$event->address}} </span>
 			</div>
 			<div class="row col-md-offset-3 col-md-8" style="margin-top:30px">
 					<img src="{{ asset('img/ticketIcon.png') }}" style="width:10%">
-					<span class="raleway" style="padding-left:15px"> TICKET PRICE </span>
+					<span class="raleway" style="padding-left:15px"> {{$event->price}} </span>
+					<span class="raleway" style="padding-left:15px"> euro </span>
 			</div>
 			<div class="row col-md-offset-3 col-md-8" style="margin-top:30px">
 					<img src="{{ asset('img/calendarIcon.png') }}" style="width:10%">
