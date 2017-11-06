@@ -18,7 +18,8 @@ class TasksController extends Controller
 
     public function show($id){
 
-    //$task = DB::table('tasks')->find($id);
+    //$task = DB::table('tasks')->find($id); nothing
+
 
 	$task = Task::find($id);
 
