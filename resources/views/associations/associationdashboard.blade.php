@@ -1,66 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-@include('layout.head');
-@include('layout.header');
+<html>
+@include('layout.head')
+@include('layout.header')
 
 <body>
 <div class="container col-md-offset-1 col-md-10">
-    @include('layout.searchbar');
+    @include('layout.searchbar')
     <div class="row col-md-12 align">
-        <a href="">
-            <div class="col-md-3 align boxLink">
-                <img class="col-md-12"  style="padding:0px" src="Picture/EventDefault.png">
-                <div style="padding-left:6%;">
-                    <p class="text raleway"> time </p>
-                    <p class="text raleway"> <b> TITLE</b></p>
-                    <p class="text raleway"> Location </p>
-                </div>
-            </div>
-        </a>
-        <a href="">
-            <div class="col-md-3 align boxLink">
-                <img class="col-md-12"  style="padding:0px" src="Picture/EventDefault.png">
-                <div style="padding-left:6%;">
-                    <p class="text raleway"> time </p>
-                    <p class="text raleway"> <b> TITLE </b></p>
-                    <p class="text raleway"> Location </p>
-                </div>
-            </div>
-        </a>
-        <a href="">
-            <div class="col-md-3 align boxLink">
-                <img class="col-md-12"  style="padding:0px" src="Picture/EventDefault.png">
-                <div style="padding-left:6%;">
-                    <p class="text raleway"> time </p>
-                    <p class="text raleway"> <b> TITLE </b></p>
-                    <p class="text raleway"> Location </p>
-                </div>
-            </div>
-        </a>
-        <a href="">
-            <div class="col-md-3 align boxLink">
-                <img class="col-md-12"  style="padding:0px" src="Picture/EventDefault.png">
-                <div style="padding-left:6%;">
-                    <p class="text raleway"> time </p>
-                    <p class="text raleway"> <b> TITLE </b></p>
-                    <p class="text raleway"> Location </p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="row col-md-12 align">
-        <a href="">
-            <div class="col-md-3 align boxLink">
-                <img class="col-md-12"  style="padding:0px" src="Picture/EventDefault.png">
-                <div style="padding-left:6%;">
-                    <p class="text raleway"> time </p>
-                    <p class="text raleway"> <b>TITLE </b></p>
-                    <p class="text raleway"> Location </p>
-                </div>
-            </div>
-        </a>
-    </div>
 
+        @foreach($associations as $association)
+
+        <a href="/asspage/{{ $association->id }}">
+            <div class="col-md-3 align boxLink">
+                <img class="col-md-12"  style="padding:0px" src="{{ asset('img/imgass.png') }}">
+                <div style="padding-left:6%;">
+                    <p class="text raleway"> <b> {{$association->name }} </b></p>
+                    <p class="text raleway"> {{$association->address }}</p>
+                    <p class="text raleway"> {{$association->email }} </p>
+                </div>
+            </div> 
+        </a>
+
+        @endforeach
+
+    </div>
 
 
 </div>

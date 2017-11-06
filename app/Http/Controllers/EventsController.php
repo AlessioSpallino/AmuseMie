@@ -23,4 +23,11 @@ class EventsController extends Controller
     	
     	return view('events.eventpage' , compact('event'));
     }
+
+    public function eventsignup($id)
+    {
+        $event = Event::findOrFail($id);
+        
+        return view('events.eventsignup' , compact('event'));
+    }
 }

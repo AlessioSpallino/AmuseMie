@@ -16,10 +16,14 @@ Auth::routes();
 Route::get('tasks', 'TasksController@index');
 Route::get('/tasks/{task}', 'TasksController@show');
 
-
+//events
 Route::get('/', 'EventsController@index');
-
 Route::get('/eventpage/{id}', 'EventsController@eventdetails');
+Route::get('/eventpage/signup/{id}', 'EventsController@eventsignup');
+
+//associations
+Route::get('/associations', 'AssociationsController@index');
+Route::get('/asspage/{id}', 'AssociationsController@associationdetails');
 
 //Route for the Google login
 Route::get('google', function () {
@@ -28,3 +32,5 @@ Route::get('google', function () {
 Route::get('/login/{social}','Auth\LoginController@socialLogin')->where('social','twitter|facebook|linkedin|google|github|bitbucket');
 
 Route::get('/login/{social}/callback','Auth\LoginController@handleProviderCallback')->where('social','twitter|facebook|linkedin|google|github|bitbucket');
+
+

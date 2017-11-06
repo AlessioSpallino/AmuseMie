@@ -21,7 +21,8 @@
 		</div>
 		<div class="container col-md-4">
 			<div class="row col-md-offset-2 col-md-8">
-					<button class="btn btn-outline-success raleway button btnUnclickable" style="margin-top:45px" type="submit">SIGNED UP</button>
+					<a href="/eventpage/signup/{{ $event->id }}"><button class="btn btn-outline-success raleway button btnClickable" style="margin-top:45px" type="submit">SIGN UP</button></a>
+
 			</div>
 			<div class="row col-md-offset-2 col-md-8">
 					<button class="btn btn-outline-success raleway button btnClickable" style="margin-top:20px" type="submit">UPDATE INFO</button>
