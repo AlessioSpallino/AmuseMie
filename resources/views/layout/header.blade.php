@@ -1,7 +1,7 @@
 <header>
 	<div class="container col-md-offset-1 col-md-10 header">
 		<div class="row col-md-12 align" >	
-			<a href="/"><div class="col-md-2 logo">
+			<a style="color: #000;" href="/"><div class="col-md-2 logo">
 				 AmuseMie 
 			</div></a>
 			<div class="col-md-1 menu">
