@@ -57,7 +57,7 @@ class LoginController extends Controller
 
         $newuser->save();
 
-        \Auth::login($user);
+        \Auth::login($newuser);
  
         return redirect()->action('EventsController@index');
 
