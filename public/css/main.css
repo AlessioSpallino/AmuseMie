@@ -144,3 +144,37 @@ body {
 .orangeText {
 	color:#ff9931;
 }
+
+.button-facebook{
+	background: #4C69BA;
+	text-align: left;
+	color: #ffffff !important;
+	border-color: #4C69BA;
+	font-weight: bold;
+    width: 178px;
+
+}
+
+img.pequeña{
+	vertical-align: text-bottom !important;
+}
+.button-google{
+    background: #F34A38;
+    text-align: left;
+    color: #ffffff !important;
+    border-color: #F34A38;
+    font-weight: bold;
+    width: 178px;
+
+}
+
+.button-aalto{
+    background: #ffff;
+    text-align: left;
+    color: #000 !important;
+    border-color: #ffff;
+    font-weight: bold;
+    width: 178px;
+    border-radius:0 !important;
+
+}
