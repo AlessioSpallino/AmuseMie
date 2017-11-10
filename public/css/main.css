@@ -158,3 +158,44 @@ body {
 .title {
 	font-weight :bold;
 }
+
+.picSearchDiv {
+	background-color:#ff9931;
+	position: relative; 
+	 height:auto;
+    margin: auto;
+    text-align:center;
+    position:relative;
+}
+
+.picSearch {
+	opacity:0.5;
+}
+
+.overPic { 
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    color:#fff;
+    height:100px;
+	font-size:60px;
+	color:black;
+}
+
+.succes {
+	background-color: #95c0A0;
+	height: 50px;
+	text-align: center;
+	border-style:solid;
+	border-color:#729379;
+}
+
+.textCentered {
+	vertical-align:middle;
+	line-height:50px;	
+	color:#538C61;
+	font-weight:bold;
+}

@@ -7,7 +7,9 @@
 	<div class="container col-md-offset-1 col-md-10">
 		
 		@include('layout.searchbar');
-		
+		<div class="container col-md-12 raleway succes" style="display:none">
+			<span class="textCentered"> SUCCESSFUL! </span>
+		</div>
 		<div class="container col-md-8 raleway">
 			<h1 class="title"> 
 				{{$event->title}}
@@ -86,6 +88,10 @@
 					<img src="{{ asset('img/ticketIcon.png') }}" style="width:10%">
 					<span class="raleway" style="padding-left:15px"> {{$event->price}} </span>
 					<span class="raleway" style="padding-left:15px"> euro </span>
+			</div>
+			<div class="row col-md-offset-3 col-md-8" style="margin-top:30px">
+					<img src="{{ asset('img/registeredUser.png') }}" style="width:10%">
+					<span class=" raleway" style="padding-left:15px"> 3/15 </span>
 			</div>
 			<div class="row col-md-offset-3 col-md-8" style="margin-top:30px">
 					<img src="{{ asset('img/calendarIcon.png') }}" style="width:10%">

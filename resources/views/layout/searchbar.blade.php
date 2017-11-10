@@ -1,5 +1,6 @@
-<div class="row col-md-12 align" >	
-			<img class="col-md-12 align" src="{{ asset('img/topImageV0.png') }}">
+<div class="row col-md-12 align picSearchDiv">	
+			<img class="col-md-12 align picSearch" src="{{ asset('img/cropedSoccer.png') }}">
+			<span class="overPic"> EVENTS </span>
 </div>
 <div class="row col-md-12 align" style="padding-bottom:50px">	
 			<div class="dropdown col-md-3 align">
