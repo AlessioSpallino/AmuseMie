@@ -27,7 +27,8 @@
 			  </ul>
 			</div>
 			<form class="form-inline col-md-6 align" >
-				<input class="form-control mr-sm-2 col-md-8 input raleway" style="width:80%; border-radius:0" type="text" placeholder="Search for events" aria-label="Search for events">
-				<button class="btn btn-outline-success my-2 my-sm-0 raleway" style="width:20%; border-radius:0" type="submit">Search</button>
+				<img class="col-md-1 searchPic" src="{{ asset('img/magGlass.png') }}">
+				<input class="form-control mr-sm-2 col-md-5 input raleway" style="width:70%; border-radius:0; height:34px; border:none" type="text" placeholder="Search for events" aria-label="Search for events">
+				<button class="btn btn-outline-success my-2 my-sm-0 raleway" style="width:20%; border-radius:0; height:34px; background-color:#ff9931;" type="submit">SEARCH</button>
 			</form>
 </div>

@@ -1,5 +1,6 @@
 body {
   padding-top: 2px;
+  padding-bottom: 40cm;
 }
 
 .align {
@@ -129,18 +130,31 @@ body {
 
 .btnClickable {
 	border-color:#ff9931 !important;
-	color:#ff9931 !important;
-	background-color: #FFF3E0 !important;
+	color:white !important;
+	background-color: #ff9931 !important;
 }
 
 
 .btnUnclickable {
 	border-color:#c16203 !important;
-	color:#c16203 !important;
+	background-color: #c16203 !important;
+	color:white !important;
 	pointer-events: none;
     cursor: default;
 }
 
 .orangeText {
 	color:#ff9931;
+}
+
+.searchPic {
+	width:10% !important;
+	height:34px !important;
+	background-color:#ededed;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+
+.title {
+	font-weight :bold;
 }

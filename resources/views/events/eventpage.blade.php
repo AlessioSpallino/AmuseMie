@@ -9,7 +9,7 @@
 		@include('layout.searchbar');
 		
 		<div class="container col-md-8 raleway">
-			<h1> 
+			<h1 class="title"> 
 				{{$event->title}}
 			</h1> <br>
 			<div style="text-align: justify;">
@@ -18,6 +18,47 @@
 				</p>
 				
 			</div>
+			<br>
+			<br>
+			<div style="text-align: justify;" class="title">
+				 <h1>ATTENDING </h1>
+			</div>
+			 <table class="row col-md-offset-0 col-md-12" style="border-collapse: collapse;">
+			  <tr>
+				<th class="col-md-3 align" >Name</th>
+				<th class="col-md-3 align">Email</th>
+				<th class="col-md-6 align">Allergies and additional information</th>
+			  </tr>
+			  
+			  <tr>
+				 <td colspan="3"><hr/></td> <!-- that is for the line -->
+				</tr>
+			  <tr>
+				<td class="col-md-3 align" >Jill</td>
+				<td class="col-md-3 align" >Smith</td>
+				<td class="col-md-3 align" >50</td>
+			  </tr>
+			   
+				<tr>
+				 <td colspan="3"><hr/></td>
+				</tr>
+			  <tr>
+				<td class="col-md-3 align" >Eve</td>
+				<td class="col-md-3 align" >Jackson</td>
+				<td class="col-md-3 align" >94</td>
+			  </tr>
+			  
+			  
+			  <tr>
+				 <td colspan="3"><hr/></td>
+				</tr>
+			  <tr>
+				<td class="col-md-3 align" >Eve</td>
+				<td class="col-md-3 align" >Jackson</td>
+				<td class="col-md-3 align" >94</td>
+			  </tr>
+			</table>
+			
 		</div>
 		<div class="container col-md-4">
 			<div class="row col-md-offset-2 col-md-8">
@@ -50,8 +91,9 @@
 					<img src="{{ asset('img/calendarIcon.png') }}" style="width:10%">
 					<span class="orangeText raleway" style="padding-left:15px"> ADD TO YOUR CALENDAR </span>
 			</div>
-			
+			 
 		</div>
+		
 		
 	</div>
 	
