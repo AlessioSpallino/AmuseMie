@@ -144,3 +144,11 @@ body {
 .orangeText {
 	color:#ff9931;
 }
+
+img.pequeña{
+	border-color: #F34A38;
+	font-weight: bold;
+	width: 178px;
+    border-radius: 0 !important;
+
+}
