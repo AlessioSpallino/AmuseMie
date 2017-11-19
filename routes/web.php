@@ -38,7 +38,4 @@ Route::get('/login/{social}','Auth\LoginController@socialLogin')->where('social'
 Route::get('/login/{social}/callback','Auth\LoginController@handleProviderCallback')->where('social','twitter|facebook|linkedin|google|github|bitbucket');
 
 
-//SEARCH FUNCTION --> EVENTS
-Route::get('/search', 'EventsController@searchevents');
-
 
