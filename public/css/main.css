@@ -152,3 +152,58 @@ img.pequeña{
     border-radius: 0 !important;
 
 }
+
+/*LOGIN BUTTONS*/
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
+
+.social-btns{
+    font-size: 40px;
+    list-style: none;
+}
+
+.social-btns li{
+    margin-bottom: 5px;
+}
+
+.social-btns li i{
+    font-size: 22px;
+}
+
+.social-btns .btn-facebook {
+  background-color: #38519f;
+  border-color: #293b75;
+  color: #ffffff;
+  min-width: 350px;
+}
+
+.social-btns .btn-facebook:hover {
+  color: #ffffff;
+  background-color: #293b75;
+}
+
+
+.social-btns .btn-google {
+  background-color: #df270b;
+  border-color: #a01b03;
+  color: #ffffff;
+  min-width: 350px;
+}
+
+.social-btns .btn-google:hover {
+  color: #ffffff;
+  background-color: #a01b03;
+}
+
+.social-btns .btn-aalto{
+    background-color: #cc0000;
+    border-color: #9b0404;
+    color: #ffffff;
+    min-width: 350px;
+}
+
+.social-btns .btn-aalto:hover {
+  color: #ffffff;
+  background-color: #9b0404;
+}
+
+

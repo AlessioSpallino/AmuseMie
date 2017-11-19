@@ -11,7 +11,7 @@
 				 <a href="/associations/" class="text"> ASSOCIATION </a>
 			</div>
 			<div class="col-md-offset-6  col-md-1 headerLink align borderRight menu">
-				 <a href="{{ url('login/google') }}" class="text">LOG IN</a>
+				 <a href="/login/" class="text">LOG IN</a>
 			</div>
 			<!-- <div class="col-md-1 headerLink align menu">
 				 <a href="#" class="text">SIGN IN</a> 

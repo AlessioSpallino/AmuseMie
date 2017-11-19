@@ -25,6 +25,10 @@ Route::get('/eventpage/signup/{id}', 'EventsController@eventsignup');
 Route::get('/associations', 'AssociationsController@index');
 Route::get('/asspage/{id}', 'AssociationsController@associationdetails');
 
+
+//LOGIN
+Route::get('/login', 'Auth\LoginController@possibleLogin');
+
 //Route for the Google login
 Route::get('google', function () {
     return view('googleAuth');

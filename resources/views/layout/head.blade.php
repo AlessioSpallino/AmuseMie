@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css.map') }}">
 	<link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway" rel="stylesheet"> 
+	
 
 	<script src="{{ asset('js/jquery.js') }}"></script> 
 	<script src="{{ asset('js/bootstrap.min.js') }}"></script>

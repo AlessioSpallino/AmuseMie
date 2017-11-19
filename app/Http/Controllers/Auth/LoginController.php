@@ -11,6 +11,14 @@ use App\User;
 
 class LoginController extends Controller
 {
+
+    public function possibleLogin()
+    {
+
+      return view('login');
+
+    }
+
     public function socialLogin($social)
  
    {
