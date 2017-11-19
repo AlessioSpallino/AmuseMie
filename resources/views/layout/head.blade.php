@@ -9,11 +9,15 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css.map') }}">
 	<link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway" rel="stylesheet"> 
+
+
+
 	
 
 	<script src="{{ asset('js/jquery.js') }}"></script> 
 	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('js/popper.js') }}"></script>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	
 	<!-- BOOTSTRAP -->
         <!-- Latest compiled and minified CSS 

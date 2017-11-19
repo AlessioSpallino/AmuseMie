@@ -12,7 +12,7 @@
 		
 		<div class="row col-md-12 align">
 
-			@foreach($events as $event)
+			@foreach($events as $event) 
 
 			<a href="/eventpage/{{ $event->id }}">
 				<div class="col-md-3 align boxLink">
@@ -26,21 +26,26 @@
 			</a>
 
 			@endforeach
-			
-		</div>	
+
+
+		
+		</div>
+
+		{!! $events->links() !!}
+
 	</div>
 	
 	<script>
-$( ".boxLink" ).hover(
-  function() {
-    $( this ).children("img").toggleClass("boxLinkImage");
-  }, function() {
-    $( this ).children("img").toggleClass("boxLinkImage");
-  }
-);
+		$( ".boxLink" ).hover(
+		  function() {
+		    $( this ).children("img").toggleClass("boxLinkImage");
+		  }, function() {
+		    $( this ).children("img").toggleClass("boxLinkImage");
+		  }
+		);
  
-</script>
-	
+	</script>
+
 	
 	
 	</body>

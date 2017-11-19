@@ -17,16 +17,6 @@
     </div>
 
 
-    <!--
-    <div>
-        <button class="button-facebook"><img class="pequeña" src="{{ asset('img/facebook-logo-blanco.png') }}" style="width: 10%">  Login with Facebook</button>
-    </div>
-    <div style="margin-top: 16px">
-        <button href="{{ url('login/google') }}" class="button-google"><img class="pequeña" src="{{ asset('img/google-plus.png') }}" style="width: 10%">  Login with Google</button>
-    </div>
-    <div style="margin-top: 16px">
-        <button class="button-aalto"><img class="pequeña" src="{{ asset('img/Aalto-logo.png') }}" style="width: 17%">  Login with Aalto</button>
-    </div>-->
 
 </div>
 

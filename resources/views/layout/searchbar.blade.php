@@ -27,7 +27,13 @@
 			  </ul>
 			</div>
 			<form class="form-inline col-md-6 align" >
-				<input class="form-control mr-sm-2 col-md-8 input raleway" style="width:80%; border-radius:0" type="text" placeholder="Search for events" aria-label="Search for events">
+				<!-- Write here in order to search something -->
+
+				{!! Form::open(['method'=>'GET','url'=>'/','role'=>'search']) !!}
+				<input id="search" name ="search" class="form-control mr-sm-2 col-md-8 input raleway" style="width:80%; border-radius:0" type="text" placeholder="Search for events" aria-label="Search for events">
+
 				<button class="btn btn-outline-success my-2 my-sm-0 raleway" style="width:20%; border-radius:0" type="submit">Search</button>
+				{!! Form::close() !!}
+
 			</form>
 </div>
