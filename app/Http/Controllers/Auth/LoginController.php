@@ -49,7 +49,7 @@ class LoginController extends Controller
  
            \Auth::login($user);
  
-           return redirect()->action('EventsController@index');
+           return redirect()->action('EventsController@loggedindex');
  
        }else{
  
@@ -67,7 +67,7 @@ class LoginController extends Controller
 
         \Auth::login($newuser);
  
-        return redirect()->action('EventsController@index');
+        return redirect()->action('EventsController@loggedindex');
 
        }
  

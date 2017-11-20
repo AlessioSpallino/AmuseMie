@@ -17,10 +17,26 @@ class AssociationsController extends Controller
 
     }
 
+    public function loggedindex()
+    {
+
+        $associations = Association::all();
+
+        return view('logged.associations.associationdashboardL', compact('associations'));
+
+    }
+
     public function associationdetails($id)
     {
     	$association = Association::findOrFail($id);
     	
     	return view('associations.associationpage' , compact('association'));
+    }
+
+    public function loggedassociationdetails($id)
+    {
+        $association = Association::findOrFail($id);
+        
+        return view('logged.associations.associationpageL' , compact('association'));
     }
 }

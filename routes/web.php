@@ -21,6 +21,7 @@ Route::get('/', 'EventsController@index');
 Route::get('/eventpage/{id}', 'EventsController@eventdetails');
 Route::get('/eventpage/signup/{id}', 'EventsController@eventsignup');
 
+
 //associations
 Route::get('/associations', 'AssociationsController@index');
 Route::get('/asspage/{id}', 'AssociationsController@associationdetails');
@@ -39,3 +40,11 @@ Route::get('/login/{social}/callback','Auth\LoginController@handleProviderCallba
 
 
 
+//LOGGED USER
+
+
+Route::get('/l', 'EventsController@loggedindex');
+Route::get('/eventpagel/{id}', 'EventsController@loggedeventdetails');
+
+Route::get('/associationsl', 'AssociationsController@loggedindex');
+Route::get('/asspagel/{id}', 'AssociationsController@loggedassociationdetails');
