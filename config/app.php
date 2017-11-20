@@ -184,6 +184,10 @@ return [
 
         Collective\Html\HtmlServiceProvider::class,
 
+        /*
+         * Providers for ckeditor
+         */
+        Unisharp\Ckeditor\ServiceProvider::class,
     ],
 
     /*

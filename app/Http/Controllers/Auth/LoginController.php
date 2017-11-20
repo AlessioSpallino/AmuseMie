@@ -42,6 +42,7 @@ class LoginController extends Controller
    {
  
        $userSocial = Socialite::driver($social)->user();
+       
  
        $user = User::where(['email' => $userSocial->getEmail()])->first();
  
@@ -49,27 +50,31 @@ class LoginController extends Controller
  
            \Auth::login($user);
  
-           return redirect()->action('EventsController@loggedindex');
+           return redirect()->action('EventsController@loggedindex', compact('user'));
+
+
  
        }else{
  
         // insert data to the database creating a new user
-        $newuser = new User;
+        $user = new User;
 
-        $newuser->name = $userSocial->getName();
-        $newuser->email = $userSocial->getEmail();
-        $newuser->profile_pic = $userSocial->getAvatar();
-        $newuser->google_id = $userSocial->getId();
-        $newuser->admin = false;
+        $user->name = $userSocial->getName();
+        $user->email = $userSocial->getEmail();
+        $user->profile_pic = $userSocial->getAvatar();
+        $user->google_id = $userSocial->getId();
+        $user->admin = false;
         
 
-        $newuser->save();
+        $user->save();
 
-        \Auth::login($newuser);
+        \Auth::login($user);
  
-        return redirect()->action('EventsController@loggedindex');
+        return redirect()->action('EventsController@loggedindex', compact('user')); 
 
        }
  
    }
 }
+
+

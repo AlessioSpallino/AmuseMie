@@ -18,9 +18,6 @@
         <div class="row col-md-offset-2 col-md-8">
             <button class="btn btn-outline-success raleway button btnClickable" style="margin-top:45px" type="submit">CREATE NEW EVENT</button>
         </div>
-        <div class="row col-md-offset-2 col-md-8">
-            <button class="btn btn-outline-success raleway button btnClickable" style="margin-top:20px" type="submit">UPDATE INFO</button>
-        </div>
 
         <div class="row col-md-offset-3 col-md-8" style="margin-top:30px">
             <span class="raleway"> Association name </span>

@@ -41,5 +41,11 @@ return [
                 'redirect' => env ( 'G+_REDIRECT' ) 
         ],
 
-        
+    'facebook' => [ 
+                'client_id' => env ( 'F_CLIENT_ID' ),
+                'client_secret' => env ( 'F_CLIENT_SECRET' ),
+                'redirect' => env ( 'F_REDIRECT' ) 
+        ],
+
+
 ];

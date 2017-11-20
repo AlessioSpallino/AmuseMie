@@ -16,8 +16,8 @@
 			
 			<div class="dropdown col-md-offset-2  col-md-3 menu">
 				<button class="dropdown-toggle col-md-12 raleway hiddenDropDown" type="button" id="dropdownMenuLogIn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				<span id="name">Chuck Norris </span>
-				<img class="logPic" src="{{ asset('img/chuckNorris.png') }}">
+				<span id="name">Molly</span>  
+				<img class="logPic" src="">	
 				<img style="width:20px" src="{{ asset('img/dot.png') }}">
 			  </button>
 			  <ul class="dropdown-menu col-md-12" aria-labelledby="dropdownMenu1">
