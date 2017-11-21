@@ -8,7 +8,7 @@
 				 <a href="/l/" class="text"> EVENTS </a>
 			</div>
 			<div class="col-md-2 menu">
-				 <a href="/associationsl/" class="text"> ASSOCIATION </a>
+				 <a href="/associationsl/" class="text"> ASSOCIATIONS </a>
 			</div>
 			<div class="col-md-2 menu">
 				 <a href="#" class="text"> MY DASHBOARD</a>

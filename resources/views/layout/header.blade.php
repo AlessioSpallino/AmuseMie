@@ -8,9 +8,9 @@
 				 <a href="/" class="text"> EVENTS </a>
 			</div>
 			<div class="col-md-1 menu">
-				 <a href="/associations/" class="text"> ASSOCIATION </a>
+				 <a href="/associations/" class="text"> ASSOCIATIONS </a>
 			</div>
-			<div class="col-md-offset-6  col-md-1 headerLink align borderRight menu">
+			<div class="col-md-offset-7  col-md-1 headerLink align menu">
 				 <a href="/login/" class="text">LOG IN</a>
 			</div>
 			<!-- <div class="col-md-1 headerLink align menu">

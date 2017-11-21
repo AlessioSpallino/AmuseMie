@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Bebas_neue';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Bebas_neue'), url('../font/BebasNeue Regular.ttf') format('truetype');
+}
+
 body {
   padding-top: 2px;
   padding-bottom: 40cm;
@@ -211,10 +218,14 @@ img.pequeña{
 
 .searchPic {
 	width:10% !important;
-	height:34px !important;
 	background-color:#ededed;
-	padding-top:2px;
-	padding-bottom:2px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.searchElement {
+	height : 45px !important;
+
 }
 
 .title {
@@ -245,6 +256,7 @@ img.pequeña{
     height:100px;
 	font-size:60px;
 	color:black;
+	font-family :Bebas_neue;
 }
 
 .succes {
