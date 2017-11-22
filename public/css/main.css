@@ -135,6 +135,11 @@ body {
 	font-weight:bold !important;
 }
 
+.hiddenButton {
+	background-color:white;
+	border:none;
+}
+
 .btnClickable {
 	border-color:#ff9931 !important;
 	color:white !important;
