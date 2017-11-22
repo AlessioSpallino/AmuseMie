@@ -1,6 +1,13 @@
 <div class="row col-md-12 align picSearchDiv">	
 			<img class="col-md-12 align picSearch" src="{{ asset('img/cropedSoccer.png') }}">
-			<span class="overPic"> EVENTS </span>
+			@if (@isset($type) && $type=='event')
+				<span class="overPic"> EVENTS </span>
+			@endif
+			@if (@isset($type) && $type=='association')
+				<span class="overPic"> ASSOCIATIONS </span>
+			@endif
+			<!-- add event or association name in the same way -->
+
 </div>
 <div class="row col-md-12 align" style="padding-bottom:50px">	
 			<div class="dropdown col-md-3 align">

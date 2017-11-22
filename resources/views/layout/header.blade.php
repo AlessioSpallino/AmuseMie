@@ -5,10 +5,20 @@
 				 AmuseMie 
 			</div></a>
 			<div class="col-md-1 menu">
-				 <a href="/" class="text"> EVENTS </a>
+			 @if (@isset($type) && $type=='event')
+				 <a href="/" class="text"><b> EVENTS </b> </a>
+			 @else
+				 <a href="/" class="text"> EVENTS  </a>
+			 @endif				 
 			</div>
 			<div class="col-md-1 menu">
+
+			 @if (@isset($type) && $type=='association')
+				<a href="/associations/" class="text"> <b>ASSOCIATIONS</b> </a>
+			 @else
 				 <a href="/associations/" class="text"> ASSOCIATIONS </a>
+			 @endif
+			 
 			</div>
 			<div class="col-md-offset-7  col-md-1 headerLink align menu">
 				 <a href="/login/" class="text">LOG IN</a>

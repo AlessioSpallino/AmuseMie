@@ -18,7 +18,8 @@ class EventsController extends Controller
 
         $search = \Request::get('search');
         $events = Event::where('title','like','%'.$search.'%')->orderBy('id')->paginate(8);
-        return view('events.index', compact('events'));
+		$type = 'event';
+        return view('events.index', compact('events','type'));
 
     }
 
@@ -31,7 +32,8 @@ class EventsController extends Controller
 
         $search = \Request::get('search');
         $events = Event::where('title','like','%'.$search.'%')->orderBy('id')->paginate(8);
-        return view('logged.events.indexL', compact('events'));
+		$type = 'event';
+        return view('logged.events.indexL', compact('events','type'));
 
     }
 

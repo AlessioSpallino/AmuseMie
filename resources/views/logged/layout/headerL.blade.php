@@ -5,17 +5,25 @@
 				 AmuseMie 
 			</div></a>
 			<div class="col-md-1 eventMenu menu">
-				 <a href="/l/" class="text"> EVENTS </a>
+			 @if (@isset($type) && $type=='event')
+				 <a href="/l/" class="text"><b> EVENTS </b> </a>
+			 @else
+				 <a href="/l/" class="text"> EVENTS  </a>
+			 @endif
 			</div>
 			<div class="col-md-2 menu">
+			 @if (@isset($type) && $type=='association')
+				<a href="/associationsl/" class="text"> <b>ASSOCIATIONS</b> </a>
+			 @else
 				 <a href="/associationsl/" class="text"> ASSOCIATIONS </a>
+			 @endif
 			</div>
 			<div class="col-md-2 menu">
 				 <a href="#" class="text"> MY DASHBOARD</a>
 			</div>
 			
 			<div class="dropdown col-md-offset-2  col-md-3 menu">
-				<button class="dropdown-toggle col-md-12 raleway hiddenDropDown" type="button" id="dropdownMenuLogIn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				<button class="dropdown-toggle col-md-12 raleway hiddenDropDown hiddenButton" type="button" id="dropdownMenuLogIn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 				<span id="name">Molly</span>  
 				<img class="logPic" src="">	
 				<img style="width:20px" src="{{ asset('img/dot.png') }}">
