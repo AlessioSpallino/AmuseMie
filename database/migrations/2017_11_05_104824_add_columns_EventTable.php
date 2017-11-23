@@ -30,7 +30,7 @@ class AddColumnsEventTable extends Migration
     public function down()
 {
     Schema::table('events', function($table) {
-        $table->dropColumn('paid');
+        
         $table->dropColumn('eventdate');
         $table->dropColumn('address');
         $table->dropColumn('price');
