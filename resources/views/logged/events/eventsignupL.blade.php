@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 @include('layout.head')
@@ -25,8 +25,7 @@
 
 			</br>
 
-			<div>
-				 <input class="form-control mr-sm-2 signUpInput signUpInputAdditional" type="text" placeholder="Write your description here" aria-label="Write your description here"> 
+
 
 				<textarea class="form-control" id="addinfo"></textarea>
 
