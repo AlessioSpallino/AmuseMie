@@ -19,7 +19,6 @@ Route::get('/tasks/{task}', 'TasksController@show');
 //events
 Route::get('/', 'EventsController@index');
 Route::get('/eventpage/{id}', 'EventsController@eventdetails');
-Route::get('/eventpage/signup/{id}', 'EventsController@eventsignup');
 
 
 //associations
@@ -45,6 +44,12 @@ Route::get('/login/{social}/callback','Auth\LoginController@handleProviderCallba
 
 Route::get('/l', 'EventsController@loggedindex');
 Route::get('/eventpagel/{id}', 'EventsController@loggedeventdetails');
+Route::get('/eventpagel/signup/{id}', 'EventsController@eventsignup');
+
+Route::post('/signup', [
+    'as'   => 'signup',
+    'uses' => 'EventsController@newparticipant',
+]);
 
 Route::get('/associationsl', 'AssociationsController@loggedindex');
 Route::get('/asspagel/{id}', 'AssociationsController@loggedassociationdetails');

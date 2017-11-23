@@ -64,11 +64,8 @@
 		</div>
 		<div class="container col-md-4">
 			<div class="row col-md-offset-2 col-md-8">
-					<a href="/eventpage/signup/{{ $event->id }}"><button class="btn btn-outline-success raleway button btnClickable" style="margin-top:45px" type="submit">SIGN UP</button></a>
+					<a href="/login"><button class="btn btn-outline-success raleway button btnClickable" style="margin-top:45px" type="submit">SIGN UP</button></a>
 
-			</div>
-			<div class="row col-md-offset-2 col-md-8">
-					<button class="btn btn-outline-success raleway button btnClickable" style="margin-top:20px" type="submit">UPDATE INFO</button>
 			</div>
 			
 			<div class="row col-md-offset-3 col-md-8" style="margin-top:30px">
@@ -77,7 +74,7 @@
 			</div>
 			<div class="row col-md-offset-3 col-md-8" style="margin-top:30px">
 					<img src="{{ asset('img/clockIcon.png') }}" style="width:10%">
-					<span class="raleway" style="padding-left:15px"> 00:00 00.00.0000 </span>
+					<span class="raleway" style="padding-left:15px"> {{$event->eventdate}} </span>
 			</div>
 	
 			<div class="row col-md-offset-3 col-md-8" style="margin-top:30px">

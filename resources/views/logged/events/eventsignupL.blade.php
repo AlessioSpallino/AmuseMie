@@ -5,20 +5,26 @@
 	 
     <body>
 		<div class="container raleway" style="text-align:center">
-		<form action="XXX.php">
-			<h1 style="padding-bottom:20px"> SIGN UP TO EVENT X</h1>
+		<form action="{{ route('signup') }}" method="POST">
+			{{ csrf_field() }}
+			<h1 style="padding-bottom:20px">SIGN UP TO</h1>
+			<h2 style="padding-bottom:20px">{{ $event->title }}</h2>
 			
 			<div class="textSignUp">Name:</div>
 			<div>
-				<input class="form-control mr-sm-2 signUpInput" type="text" placeholder="Pretext" aria-label="Pretext">
+				<input name="val1" class="form-control mr-sm-2 signUpInput" type="text" placeholder="Pretext" value="{{ Auth::user()->name }}" aria-label="Pretext">
 			</div>
 			<div class="textSignUp">Email:</div>
 			<div>
-				<input class="form-control mr-sm-2 signUpInput" type="text" placeholder="Pretext" aria-label="Pretext">
+				<input name="val2" class="form-control mr-sm-2 signUpInput" type="text" placeholder="Pretext" value="{{ Auth::user()->email }}" aria-label="Pretext">
 			</div>
+			
 			<div class="textSignUp">Allergies:</div>
 			<div>
-				<input class="form-control mr-sm-2 signUpInput" type="text" placeholder="Pretext" aria-label="Pretext">
+				<input name="val3" class="form-control mr-sm-2 signUpInput" type="text"  value="{{ Auth::user()->allergies }}" aria-label="Pretext">
+			</div>
+			<div>
+				<input name="val4" class="form-control mr-sm-2 signUpInput" type="hidden" placeholder="Pretext" value="{{ $event->id }}" aria-label="Pretext">
 			</div>
 
 			<!--<div class="textSignUp">Additional information you think we need to know:</div> 

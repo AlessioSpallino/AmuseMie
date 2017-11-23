@@ -24,7 +24,7 @@
 			
 			<div class="dropdown col-md-offset-2  col-md-3 menu">
 				<button class="dropdown-toggle col-md-12 raleway hiddenDropDown hiddenButton" type="button" id="dropdownMenuLogIn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				<span id="name">Molly</span>  
+				<span id="name">{{ Auth::user()->name }}</span>  
 				<img class="logPic" src="">	
 				<img style="width:20px" src="{{ asset('img/dot.png') }}">
 			  </button>

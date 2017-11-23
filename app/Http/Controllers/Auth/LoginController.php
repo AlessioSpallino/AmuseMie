@@ -9,6 +9,7 @@ use Laravel\Socialite\Facades\Socialite as Socialite;
 
 use App\User;
 
+
 class LoginController extends Controller
 {
 
@@ -49,7 +50,8 @@ class LoginController extends Controller
        if($user){
  
            \Auth::login($user);
- 
+
+
            return redirect()->action('EventsController@loggedindex', compact('user'));
 
 

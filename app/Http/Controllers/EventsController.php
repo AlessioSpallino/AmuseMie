@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Event;
+use App\EventRegistrations;
 use DB;
 
 class EventsController extends Controller
@@ -33,6 +34,8 @@ class EventsController extends Controller
         $search = \Request::get('search');
         $events = Event::where('title','like','%'.$search.'%')->orderBy('id')->paginate(8);
 		$type = 'event';
+
+        
         return view('logged.events.indexL', compact('events','type'));
 
     }
@@ -47,13 +50,39 @@ class EventsController extends Controller
     public function loggedeventdetails($id)
     {
         $event = Event::findOrFail($id);
+        $participants = DB::table('eventRegistrations')
+                                ->where('event_id', '=', $id)
+                                ->get();
+
         
-        return view('logged.events.eventpageL' , compact('event'));
+        return view('logged.events.eventpageL' , compact('event', 'participants'));
     }
 
     public function eventsignup($id)
     {
-        return view('logged.events.eventsignupL');
+        $event = Event::findOrFail($id);
+        return view('logged.events.eventsignupL', compact('event'));
+    }
+
+    public function newparticipant(Request $request)
+    {
+        #Check if values are inserted
+        $this->validate($request, [
+            'val1' => 'required',
+            'val2' => 'required'    
+
+        ]);
+
+        $reg = new EventRegistrations;
+        $reg->name = \Auth::user()->name;
+        $reg->user_id = \Auth::user()->id;
+        $reg->event_id = $request->val4;
+        $reg->email = $request->val2;
+        $reg->allergies = $request->val3;
+        $reg->save();
+
+        
+        return redirect()->action('EventsController@loggedindex');
     }
 
 }

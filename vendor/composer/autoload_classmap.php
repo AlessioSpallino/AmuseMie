@@ -9,6 +9,7 @@ return array(
     'App\\Association' => $baseDir . '/app/Association.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Event' => $baseDir . '/app/Event.php',
+    'App\\EventRegistrations' => $baseDir . '/app/EventRegistrations.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\AssociationsController' => $baseDir . '/app/Http/Controllers/AssociationsController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',

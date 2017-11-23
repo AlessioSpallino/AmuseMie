@@ -353,6 +353,7 @@ class ComposerStaticInitc502755b9f2e92432c7e8b2c6ea0082c
         'App\\Association' => __DIR__ . '/../..' . '/app/Association.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Event' => __DIR__ . '/../..' . '/app/Event.php',
+        'App\\EventRegistrations' => __DIR__ . '/../..' . '/app/EventRegistrations.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\AssociationsController' => __DIR__ . '/../..' . '/app/Http/Controllers/AssociationsController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',

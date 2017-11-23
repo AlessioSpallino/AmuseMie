@@ -28,43 +28,34 @@
 			 <table class="row col-md-offset-0 col-md-12" style="border-collapse: collapse;">
 			  <tr>
 				<th class="col-md-3 align" >Name</th>
-				<th class="col-md-3 align">Email</th>
+				<th class="col-md-6 align">Email</th>
 				<th class="col-md-6 align">Allergies and additional information</th>
 			  </tr>
 			  
 			  <tr>
 				 <td colspan="3"><hr/></td> <!-- that is for the line -->
 				</tr>
-			  <tr>
-				<td class="col-md-3 align" >Jill</td>
-				<td class="col-md-3 align" >Smith</td>
-				<td class="col-md-3 align" >50</td>
-			  </tr>
-			   
-				<tr>
-				 <td colspan="3"><hr/></td>
-				</tr>
-			  <tr>
-				<td class="col-md-3 align" >Eve</td>
-				<td class="col-md-3 align" >Jackson</td>
-				<td class="col-md-3 align" >94</td>
-			  </tr>
+
+				@foreach($participants as $p)
+
+				  <tr>
+					<td class="col-md-3 align" >{{ $p->name }}</td>
+					<td class="col-md-3 align" >{{ $p->email }}</td>
+					<td class="col-md-3 align" >{{ $p->allergies }}</td>
+				  </tr>
+				   
+					<tr>
+					 <td colspan="3"><hr/></td>
+					</tr>
+
+				@endforeach
 			  
-			  
-			  <tr>
-				 <td colspan="3"><hr/></td>
-				</tr>
-			  <tr>
-				<td class="col-md-3 align" >Eve</td>
-				<td class="col-md-3 align" >Jackson</td>
-				<td class="col-md-3 align" >94</td>
-			  </tr>
 			</table>
 			
 		</div>
 		<div class="container col-md-4">
 			<div class="row col-md-offset-2 col-md-8">
-					<a href="/eventpage/signup/{{ $event->id }}"><button class="btn btn-outline-success raleway button btnClickable" style="margin-top:45px" type="submit">SIGN UP</button></a>
+					<a href="/eventpagel/signup/{{ $event->id }}"><button class="btn btn-outline-success raleway button btnClickable" style="margin-top:45px" type="submit">SIGN UP</button></a>
 
 			</div>
 			
@@ -74,7 +65,7 @@
 			</div>
 			<div class="row col-md-offset-3 col-md-8" style="margin-top:30px">
 					<img src="{{ asset('img/clockIcon.png') }}" style="width:10%">
-					<span class="raleway" style="padding-left:15px"> 00:00 00.00.0000 </span>
+					<span class="raleway" style="padding-left:15px"> {{$event->eventdate}} </span>
 			</div>
 	
 			<div class="row col-md-offset-3 col-md-8" style="margin-top:30px">
