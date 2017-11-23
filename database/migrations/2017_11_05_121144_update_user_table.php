@@ -26,7 +26,10 @@ class UpdateUserTable extends Migration
      */
     public function down()
     {
-        $table->dropColumn('admin');
-        $table->dropColumn('surname');
+        Schema::table('users', function($table) {
+            $table->dropColumn('admin');
+            $table->dropColumn('surname');
+        });
+        
     }
 }

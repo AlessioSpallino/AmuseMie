@@ -69,7 +69,7 @@
 			</div>
 			
 			<div class="row col-md-offset-3 col-md-8" style="margin-top:30px">
-					<img src="{{ asset('img/ByIcon.png') }}" style="width:10%">
+					<img src="{{ asset('img/byIcon.png') }}" style="width:10%">
 					<span class="orangeText raleway" style="padding-left:15px"> ASSOCIATION </span>
 			</div>
 			<div class="row col-md-offset-3 col-md-8" style="margin-top:30px">
@@ -90,7 +90,7 @@
 					<img src="{{ asset('img/registeredUser.png') }}" style="width:10%">
 					<span class=" raleway" style="padding-left:15px"> 3/15 </span>
 			</div>
-			<div class="row col-md-offset-3 col-md-9" style="margin-top:30px">
+			<div class="row col-md-offset-3 col-md-8" style="margin-top:30px">
 					<img src="{{ asset('img/calendarIcon.png') }}" style="width:10%">
 					<span class="orangeText raleway" style="padding-left:15px"> ADD TO YOUR CALENDAR </span>
 			</div>

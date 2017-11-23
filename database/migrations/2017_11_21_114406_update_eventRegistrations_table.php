@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UploadUsersTable extends Migration
+class UpdateEventRegistrationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class UploadUsersTable extends Migration
      */
     public function up()
     {
-        //
-        Schema::table('users', function($table) {
- 
-            $table->string('profile_pic');
-            $table->string('google_id');
+        Schema::table('eventRegistrations', function (Blueprint $table) {
+            $table->string('email');
+            $table->text('allergies');
         });
     }
 
@@ -29,11 +27,8 @@ class UploadUsersTable extends Migration
     public function down()
     {
         
-        Schema::table('users', function($table) {
- 
-            $table->dropColumn('profile_pic');
-            $table->dropColumn('google_id');
-        });
-        
+            $table->dropColumn('email');
+            $table->dropColumn('allergies');
+       
     }
 }

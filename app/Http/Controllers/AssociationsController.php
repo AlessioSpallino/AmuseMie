@@ -12,8 +12,8 @@ class AssociationsController extends Controller
     {
 
 		$associations = Association::all();
-		$type='association';
-    	return view('associations.associationdashboard', compact('associations','type'));
+
+    	return view('associations.associationdashboard', compact('associations'));
 
     }
 
@@ -21,8 +21,8 @@ class AssociationsController extends Controller
     {
 
         $associations = Association::all();
-		$type='association';
-        return view('logged.associations.associationdashboardL', compact('associations','type'));
+
+        return view('logged.associations.associationdashboardL', compact('associations'));
 
     }
 

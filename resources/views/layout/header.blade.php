@@ -5,22 +5,12 @@
 				 AmuseMie 
 			</div></a>
 			<div class="col-md-1 menu">
-			 @if (@isset($type) && $type=='event')
-				 <a href="/" class="text"><b> EVENTS </b> </a>
-			 @else
-				 <a href="/" class="text"> EVENTS  </a>
-			 @endif				 
+				 <a href="/" class="text"> EVENTS </a>
 			</div>
 			<div class="col-md-1 menu">
-
-			 @if (@isset($type) && $type=='association')
-				<a href="/associations/" class="text"> <b>ASSOCIATIONS</b> </a>
-			 @else
-				 <a href="/associations/" class="text"> ASSOCIATIONS </a>
-			 @endif
-			 
+				 <a href="/associations/" class="text"> ASSOCIATION </a>
 			</div>
-			<div class="col-md-offset-7  col-md-1 headerLink align menu">
+			<div class="col-md-offset-6  col-md-1 headerLink align borderRight menu">
 				 <a href="/login/" class="text">LOG IN</a>
 			</div>
 			<!-- <div class="col-md-1 headerLink align menu">

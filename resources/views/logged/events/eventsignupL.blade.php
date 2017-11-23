@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html>
 
 @include('layout.head')
@@ -20,16 +20,17 @@
 			<div>
 				<input class="form-control mr-sm-2 signUpInput" type="text" placeholder="Pretext" aria-label="Pretext">
 			</div>
-			<div class="textSignUp">Additional information you think we need to know:</div>
+
+			<!--<div class="textSignUp">Additional information you think we need to know:</div> 
 
 			</br>
 
-			<div class="col-md-offset-2 col-md-8">
-				<!-- <input class="form-control mr-sm-2 signUpInput signUpInputAdditional" type="text" placeholder="Write your description here" aria-label="Write your description here"> -->
+			<div>
+				 <input class="form-control mr-sm-2 signUpInput signUpInputAdditional" type="text" placeholder="Write your description here" aria-label="Write your description here"> 
 
 				<textarea class="form-control" id="addinfo"></textarea>
 
-			</div> 
+			</div> -->
 
 
 
