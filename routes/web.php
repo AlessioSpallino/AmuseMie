@@ -80,7 +80,7 @@ Route::get('/newe', 'EventsController@opennewevent');
 
 View::composer('logged.layout.headerL', function ($view)
 {
-    $asss = '';
+    $asss = [];
 	$admin = DB::table('admin')
                     ->where('user_id', '=', \Auth::user()->id)
                     ->get();
