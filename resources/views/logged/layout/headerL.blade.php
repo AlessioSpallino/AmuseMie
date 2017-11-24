@@ -35,12 +35,14 @@
 				<li class="divider"></li> -->
 
 				<li style="color: #ff9933; margin-left: 10px">YOUR ASSOCIATIONS:</li>
-				@foreach($asss as $ass) 
+				<?php if(isset($asss)) : ?>
+					@foreach($asss as $ass) 
 
-				<li><a href="/myasspagel/{{ $ass->id }}"> {{ $ass->name }} </a></li>
-				<li class="divider"></li> 
+					<li><a href="/myasspagel/{{ $ass->id }}"> {{ $ass->name }} </a></li>
+					<li class="divider"></li> 
 
-				@endforeach
+					@endforeach
+				<?php endif; ?>
 				<li style="color: #ff9933; margin-left: 10px">YOUR EVENTS:</li>
 				@foreach($creators as $creator) 
 
