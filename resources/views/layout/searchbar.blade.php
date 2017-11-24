@@ -11,33 +11,38 @@
 </div>
 <div class="row col-md-12 align" style="padding-bottom:50px">	
 			<div class="dropdown col-md-3 align">
-				<button class="btn btn-secondary dropdown-toggle col-md-12 raleway searchElement" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+
+				<button class="btn btn-secondary dropdown-toggle col-md-12 raleway searchElement" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
 				LOCATION
 				<span class="caret"></span>
 			  </button>
+
+
 			  <ul class="dropdown-menu col-md-12" aria-labelledby="dropdownMenu1">
-				<li><a href="#">Helsinki</a></li>
+				<li><a id="helsinki" href="#" onclick="changeLocation('Helsinki')">Helsinki</a></li>
 				<li class="divider"></li> 
-				<li><a href="#">Otaniemi</a></li>
+				<li><a id="otaniemi" href="#" onclick="changeLocation('Otaniemi')">Otaniemi</a></li>
 				<li class="divider"></li> 
-				<li><a href="#">Espoo</a></li>
+				<li><a id="espoo" href="#" onclick="changeLocation('Espoo')">Espoo</a></li>
 			  </ul>
 			</div>
 			<div class="dropdown col-md-3 align sideBorder" >
+
 				<button class="btn btn-secondary dropdown-toggle col-md-12 raleway searchElement" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 				EVENT TYPE
 				<span class="caret"></span>
 			  </button>
+
 			  <ul class="dropdown-menu col-md-12" aria-labelledby="dropdownMenu2">
-				<li><a href="#">Sport</a></li>
+				<li><a id="sport" href="#" onclick="changeType('Sport')" >Sport</a></li>
 				<li class="divider"></li> 
-				<li><a href="#">Musique</a></li>
+				<li><a id="musique" href="#" onclick="changeType('Musique')">Musique</a></li>
 				<li class="divider"></li> 
-				<li><a href="#">Outdoor</a></li>
+				<li><a id="outdoor" href="#" onclick="changeType('Outdoor')">Outdoor</a></li>
 				<li class="divider"></li> 
-				<li><a href="#">Cultural</a></li>
+				<li><a id="cultural" href="#" onclick="changeType('Cultural')">Cultural</a></li>
 				<li class="divider"></li> 
-				<li><a href="#">Other</a></li>
+				<li><a id="other" href="#" onclick="changeType('Other')">Other</a></li>
 			  </ul>
 			</div>
 			<form class="form-inline col-md-6 align" >
@@ -52,3 +57,14 @@
 
 			</form>
 </div>
+
+<script>function changeLocation(loc){
+        document.getElementById("dropdownMenu1").innerHTML= loc;
+    }
+
+</script>
+<script>function changeType(typee){
+        document.getElementById("dropdownMenu2").innerHTML=typee;
+    }
+
+</script>

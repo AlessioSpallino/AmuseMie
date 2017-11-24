@@ -4,9 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Event extends Model
+class Admin extends Model
 {
-    protected $table = 'events';
+    protected $table = 'admin';
+    public $timestamps = false;
     
     /**
      * The attributes that are mass assignable.
@@ -14,7 +15,7 @@ class Event extends Model
      * @var array
      */
     protected $fillable = [ 
-        'title', 'description', 'eventdate', 'address', 'price', 'creator'
+        'user_id', 'ass_id'
     ];
 
     /**

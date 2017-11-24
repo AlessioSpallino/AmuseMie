@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 @include('layout.head')
-@include('layout.header')
+@include('logged.layout.headerL')
 <body>
 <div class="container col-md-offset-1 col-md-10">
     @include('layout.searchbar');
@@ -15,8 +15,11 @@
         </div>
     </div>
     <div class="container col-md-4">
+        
+        <div class="row col-md-offset-2 col-md-8">
+                    <a href="/updateass/{{ $association->id }}"><button class="btn btn-outline-success raleway button btnClickable" style="margin-top:45px" type="submit">UPDATE INFO</button></a>
 
-
+            </div>
         <div class="row col-md-offset-3 col-md-8" style="margin-top:30px">
             <span class="raleway"> {{$association->address}} </span>
         </div>

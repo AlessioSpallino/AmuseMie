@@ -29,15 +29,35 @@
 				<img style="width:20px" src="{{ asset('img/dot.png') }}">
 			  </button>
 			  <ul class="dropdown-menu col-md-12" aria-labelledby="dropdownMenu1">
-				<li><a href="#">PROFILE</a></li>
+				<!-- <li><a href="#">PROFILE</a></li>
 				 <li class="divider"></li> 
-				<li><a href="#">LOG OUT</a></li>
-				 <li class="divider"></li> 
-				<li><a href="#">ASSOCIATION 1</a></li>
+				<li><a href="#">LOG OUT</a></li> 
+				<li class="divider"></li> -->
+
+				<li style="color: #ff9933; margin-left: 10px">YOUR ASSOCIATIONS:</li>
+				@foreach($asss as $ass) 
+
+				<li><a href="/myasspagel/{{ $ass->id }}"> {{ $ass->name }} </a></li>
 				<li class="divider"></li> 
-				<li><a href="#">ASSOCIATION 2</a></li>
+
+				@endforeach
+				<li style="color: #ff9933; margin-left: 10px">YOUR EVENTS:</li>
+				@foreach($creators as $creator) 
+
+				<li><a href="/myeventpagel/{{ $creator->id }}"> {{ $creator->title }} </a></li>
 				<li class="divider"></li> 
-				<li><a href="#">CREATE NEW ASSOCIATION</a></li>
+
+				@endforeach
+
+				<li class="divider"></li> 
+				<li><a href="/newass/">CREATE NEW ASSOCIATION</a></li>
+				<li class="divider"></li> 
+				<?php if(Auth::user()->admin == 1) : ?>
+    
+				<li><a href="/newe/">CREATE NEW EVENT</a></li>
+				 
+				<?php endif; ?>
+				
 			  </ul>
 			</div>
 		</div>

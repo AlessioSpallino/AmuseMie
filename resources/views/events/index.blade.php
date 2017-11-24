@@ -18,8 +18,8 @@
 				<div class="col-md-3 align boxLink">
 					<img class="col-md-12"  style="padding:0px" src="{{ asset('img/imgeve.png') }}">
 					<div style="padding-left:6%;">
-						<p class="text raleway"> <b> {{ $event->time }} </b></p>
-						<h4 class="text raleway"> {{ $event->title }} </h4>
+						<h4 class="text raleway"> <b> {{ $event->title }} </b></h4>
+						<p class="text raleway"> {{ $event->eventdate }} </p>
 						<p class="text raleway"> {{ $event->address }} </p>
 					</div>
 				</div>

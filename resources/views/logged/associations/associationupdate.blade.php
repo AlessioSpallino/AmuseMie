@@ -3,7 +3,7 @@
 @include('layout.head');
 <body>
 <div class="container raleway" style="text-align:center">
-	<form action="{{ route('newassociation') }}" method="POST">
+<form action="{{ route('updateassociation') }}" method="POST">
     {{ csrf_field() }}
     <h1 style="padding-bottom:20px"> CREATE ASSOCIATION</h1>
 
@@ -40,15 +40,9 @@
         <input name="picture" class="form-control mr-sm-2 signUpInput" type="image" src="{{ asset('img/camara.png') }}" style="height:100%">
     </div>
     <div class="col-md-offset-5 col-md-2">
-        <input class="btn btn-outline-success raleway button btnClickable" style="margin-top:40px;margin-bottom: 20px" type="submit" value="CREATE">
+        <input class="btn btn-outline-success raleway button btnClickable" style="margin-top:40px;margin-bottom: 20px" type="submit" value="UPDATE">
     </div>
-	</form>
+    </form>
 </div>
 
-<script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js')}}"></script>
-    <script>
-        CKEDITOR.replace( 'addinfo' );
-    </script>
 </body>
-
-</html>
