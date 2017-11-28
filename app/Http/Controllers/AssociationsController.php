@@ -9,8 +9,13 @@ use App\User;
 use App\Admin;
 use DB;
 
+use File;
+use Storage;
+
 class AssociationsController extends Controller
 {
+
+
     public function index()
     {
         $search = \Request::get('search');
@@ -70,11 +75,33 @@ class AssociationsController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'address' => 'required',
-            'email' => 'required',   
+            'email' => 'required'   
 
         ]);
 
+    
         $ass = new Association;
+
+
+        if($request->hasFile('photo')){
+            
+            $path = $request->file('photo')->store('AssPicture', 'public');
+            $ass->logo = $path;
+
+            //Questa sotto salva ma non so come mostrare la foto
+            /*$destinationPath = "assPicture";
+            $file = $request->photo;
+            $extension = $file->getClientOriginalExtension();
+            
+            $filename = rand(1111,9999).".".$extension;
+            $file->move($destinationPath,$filename);
+            $ass->logo = $filename;*/
+        }
+        else{
+            
+            $ass->logo = "";
+        }
+
         $ass->name = $request->name;
         $ass->email = $request->email;
 
@@ -96,7 +123,6 @@ class AssociationsController extends Controller
         
         $ass->description = $request->description;
         $ass->address = $request->address;
-        $ass->logo = "";
         $ass->save();
 
         $user = DB::table('users')
