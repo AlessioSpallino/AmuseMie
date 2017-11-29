@@ -38,9 +38,8 @@ class EventsController extends Controller
 		$type = 'event';
 
         $asss = DB::table('associations')
-                                ->join('admin', 'associations.id', '=', 'admin.ass_id')
+                                ->leftJoin('admin', 'associations.id', '=', 'admin.ass_id')
                                 ->where('admin.user_id', '=', \Auth::user()->id)
-                                //->where('admin.ass_id', '=', 'associations.id')
                                 ->get();
 
         

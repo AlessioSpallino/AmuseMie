@@ -38,7 +38,7 @@
 				
 					@foreach($asss as $ass) 
 
-					<li><a href="/myasspagel/{{ $ass->id }}"> {{ $ass->name }} </a></li>
+					<li><a href="/myasspagel/{{ $ass->ass_id }}"> {{ $ass->name }} </a></li>
 					<li class="divider"></li> 
 
 					@endforeach
