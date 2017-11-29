@@ -12,7 +12,7 @@
 
         <a href="/asspage/{{ $association->id }}">
             <div class="col-md-3 align boxLink">
-                <img class="col-md-12"  style="padding:0px" src="{{ asset('img/imgass.png') }}">
+                <img class="col-md-12" width="100" height="250" style="padding:0px" src="{{asset('assPicture/'.$association->logo)}}">
                 <div style="padding-left:6%;">
                     <p class="text raleway"> <b> {{$association->name }} </b></p>
                     <p class="text raleway"> {{$association->address }}</p>

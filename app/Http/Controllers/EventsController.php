@@ -128,6 +128,28 @@ class EventsController extends Controller
         $stringparsed = Carbon::createFromFormat('d.m.Y H:m', $string);
 
         $event = new Event;
+
+        //Qui andro' a caricare la foto
+        if($request->hasFile('photo')){
+            
+            //$path = $request->file('photo')->store('AssPicture', 'public');
+            //$ass->logo = $path;
+
+            //Questa sotto salva ma non so come mostrare la foto
+            $destinationPath = "evePicture";
+            $file = $request->photo;
+            $extension = $file->getClientOriginalExtension();
+            
+            $filename = rand(1111,9999).".".$extension;
+            $file->move($destinationPath,$filename);
+            $event->logo = $filename;
+        }
+        else{
+            
+            $event->logo = "";
+        }
+
+
         $event->title = $request->title;
         $event->description = $request->description;
         $event->eventdate = $stringparsed;

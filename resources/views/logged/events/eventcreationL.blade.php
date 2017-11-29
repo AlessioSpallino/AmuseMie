@@ -3,7 +3,7 @@
 @include('layout.head')
 <body>
 <div class="container raleway" style="text-align:center">
-	<form action="{{ route('newevent') }}" method="POST">
+	<form action="{{ route('newevent') }}" method="POST" enctype="multipart/form-data">
     {{ csrf_field() }}
 		<h1 style="padding-bottom:20px"> CREATE EVENT</h1>
 
@@ -31,9 +31,12 @@
     	<div>
         	<textarea name="description" class="form-control" id="addinfo"></textarea>
     	</div>
-		<div>
-			<input class="form-control mr-sm-2 signUpInput" type="image" style="height:100%" src="{{ asset('img/camara.png') }}">
-		</div>
+		<div class="textSignUp">Add association picture:</div>
+    		<div align="center" style="margin: 0 auto">
+        		<input name="photo" class="form-control mr-sm-2 signUpInput" type="file" style="height:100%">
+
+    	</div> 
+		
 		<div class="col-md-offset-5 col-md-2">
 			<input class="btn btn-outline-success raleway button btnClickable" style="margin-top:20px;margin-bottom: 20px" type="submit" value="CREATE">
 		</div>

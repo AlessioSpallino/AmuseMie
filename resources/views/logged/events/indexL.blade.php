@@ -16,7 +16,7 @@
 
 			<a href="/eventpagel/{{ $event->id }}">
 				<div class="col-md-3 align boxLink">
-					<img class="col-md-12"  style="padding:0px" src="{{ asset('img/imgeve.png') }}">
+                <img class="col-md-12" width="100" height="250" style="padding:0px" src="{{asset('evePicture/'.$event->logo)}}">
 					<div style="padding-left:6%;">
 						<h4 class="text raleway"> {{ $event->title }} </h4>
 						<p class="text raleway"> <b> {{ $event->eventdate }} </b></p>
