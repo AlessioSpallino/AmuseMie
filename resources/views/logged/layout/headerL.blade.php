@@ -42,6 +42,7 @@
 					<li class="divider"></li> 
 
 					@endforeach
+ 
 				
 				<li style="color: #ff9933; margin-left: 10px">YOUR EVENTS:</li>
 				@foreach($creators as $creator) 

@@ -37,18 +37,14 @@ class EventsController extends Controller
         $events = Event::where('title','like','%'.$search.'%')->orderBy('id')->paginate(8);
 		$type = 'event';
 
-        $admin = DB::table('admin')
-                                ->where('user_id', '=', \Auth::user()->id)
+        $asss = DB::table('associations')
+                                ->join('admin', 'associations.id', '=', 'admin.ass_id')
+                                ->where('admin.user_id', '=', \Auth::user()->id)
+                                //->where('admin.ass_id', '=', 'associations.id')
                                 ->get();
 
-        foreach($admin as $x){
-            
-            $asss = DB::table('associations')
-                                ->where('id', '=', $x->id)
-                                ->get();
-
-            break;
-        }
+        
+        
 
         $creators = DB::table('events')
                                 ->where('creator', '=', \Auth::user()->name)

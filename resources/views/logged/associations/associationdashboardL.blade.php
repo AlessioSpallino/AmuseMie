@@ -12,7 +12,7 @@
 
         <a href="/asspagel/{{ $association->id }}">
             <div class="col-md-3 align boxLink">
-                <img class="col-md-12"  style="padding:0px" src="{{asset($association->logo)}}">
+                <img class="col-md-12"  style="padding:0px" src="{{asset('assPicture/'.$association->logo)}}">
                 <div style="padding-left:6%;">
                     <p class="text raleway"> <b> {{$association->name }} </b></p>
                     <p class="text raleway"> {{$association->address }}</p>

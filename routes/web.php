@@ -81,20 +81,14 @@ Route::get('/newe', 'EventsController@opennewevent');
 View::composer('logged.layout.headerL', function ($view)
 {
     $asss = [];
-	$admin = DB::table('admin')
-                    ->where('user_id', '=', \Auth::user()->id)
-                    ->get();
-
-
-        foreach($admin as $x){
-            
-
-            $asss = DB::table('associations')
-                                ->where('id', '=', $x->id)
+    
+	$asss = DB::table('associations')
+                                ->join('admin', 'associations.id', '=', 'admin.ass_id')
+                                ->where('admin.user_id', '=', \Auth::user()->id)
+                                //->where('admin.ass_id', '=', 'associations.id')
                                 ->get();
 
-            break;
-        }
+        
 	
 	$view->with('asss', $asss);
 });
